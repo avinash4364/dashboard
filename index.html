@@ -5,10 +5,541 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Admin DashBoard</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,FILL@20..48,0..1&icon_names=admin_panel_settings,dashboard,groups,help_center,history,home,id_card,link,mark_chat_read,mark_chat_unread,notifications,notifications_active,preview,search,settings,star,task&display=block"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,FILL@20..48,0..1&icon_names=admin_panel_settings,dashboard,groups,help_center,history,home,id_card,mark_chat_read,mark_chat_unread,notifications,notifications_active,search,settings,share,star,task,visibility&display=block"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body></body>
+    <body>
+        <div class="dashboard">
+            <!-- sidebar -->
+
+            <aside class="sidebar panel">
+                <div class="logo">
+                    <span class="material-symbols-outlined" aria-hidden="true"
+                        >dashboard</span
+                    >
+                    <h1 class="panel-heading--title">Dashboard</h1>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >home</span
+                                ><span class="nav-title">Home</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >id_card</span
+                                ><span class="nav-title">Profile</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >mark_chat_unread</span
+                                ><span class="nav-title">Messages</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >history</span
+                                ><span class="nav-title">History</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >task</span
+                                ><span class="nav-title">Tasks</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >groups</span
+                                ><span class="nav-title">Communities</span></a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="nav-list secondary">
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >settings</span
+                                ><span class="nav-title">Settings</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >help_center</span
+                                ><span class="nav-title">support</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                                ><span
+                                    class="material-symbols-outlined"
+                                    aria-hidden="true"
+                                    >admin_panel_settings</span
+                                ><span class="nav-title">privacy</span></a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- navigation -->
+            <header class="header">
+                <form class="search-bar" method="get">
+                    <button type="submit" aria-label="submit search">
+                        <span
+                            class="material-symbols-outlined"
+                            aria-hidden="true"
+                            >search</span
+                        >
+                    </button>
+                    <input
+                        type="search"
+                        name="search"
+                        id="search"
+                        aria-label="search projects"
+                    />
+                </form>
+                <div class="user-actions">
+                    <button class="icon-btn" aria-label="Notifications">
+                        <span
+                            class="material-symbols-outlined"
+                            aria-hidden="true"
+                            >notifications_active</span
+                        ></button
+                    ><img
+                        src="assets/destiny.svg"
+                        alt=""
+                        class="avatar-small"
+                    />
+                    <span class="user-name">Destiny Jones</span>
+                </div>
+            </header>
+
+            <!-- main content of the page -->
+            <!-- the content of which changes for every action done in aside control panel -->
+
+            <main class="main-content">
+                <div class="hero">
+                    <div class="user-welcome">
+                        <img
+                            src="assets/destiny.svg"
+                            alt="destiny jones"
+                            class="avatar-large"
+                        />
+
+                        <div class="welcome-text">
+                            <p>Hi, there</p>
+                            <h2>Destiny Jones (@destiny)</h2>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <!-- these buttons can also be part of form element when backend is actually implemented -->
+                        <button class="btn-primary">new</button
+                        ><button class="btn-primary">upload</button
+                        ><button class="btn-primary">share</button>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <!-- Projects section -->
+
+                    <section class="projects">
+                        <h3>Your Projects</h3>
+                        <div class="cards-grid">
+                            <article class="card">
+                                <div class="card-left-border"></div>
+                                <div class="card-content">
+                                    <h4>Super Cool Project</h4>
+                                    <p>
+                                        A full-stack social media dashboard
+                                        designed for high-volume data
+                                        visualization and real-time user
+                                        engagement tracking.
+                                    </p>
+                                    <div class="card-actions">
+                                        <button
+                                            type="button"
+                                            aria-label="Star project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >star</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Watch project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >visibility</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Fork project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >share</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-left-border"></div>
+                                <div class="card-content">
+                                    <h4>Less Cool Project</h4>
+                                    <p>
+                                        A background script written in Python to
+                                        automate daily database backups and
+                                        clear temporary cache files every 24
+                                        hours.
+                                    </p>
+                                    <div class="card-actions">
+                                        <button
+                                            type="button"
+                                            aria-label="Star project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >star</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Watch project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >visibility</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Fork project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >share</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-left-border"></div>
+                                <div class="card-content">
+                                    <h4>Impossible App</h4>
+                                    <p>
+                                        An ambitious WebGL experiment attempting
+                                        to render high-fidelity 3D environments
+                                        directly within a standard mobile
+                                        browser.
+                                    </p>
+                                    <div class="card-actions">
+                                        <button
+                                            type="button"
+                                            aria-label="Star project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >star</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Watch project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >visibility</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Fork project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >share</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-left-border"></div>
+                                <div class="card-content">
+                                    <h4>Easy Peasy App</h4>
+                                    <p>
+                                        A lightweight Chrome extension that
+                                        replaces every image on a webpage with a
+                                        high-resolution photo of a sleeping
+                                        kitten.
+                                    </p>
+                                    <div class="card-actions">
+                                        <button
+                                            type="button"
+                                            aria-label="Star project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >star</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Watch project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >visibility</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Fork project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >share</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="card">
+                                <div class="card-left-border"></div>
+                                <div class="card-content">
+                                    <h4>Ad blocker</h4>
+                                    <p>
+                                        A privacy-focused DNS filtering tool
+                                        that blocks intrusive trackers and
+                                        malicious scripts without slowing down
+                                        page load speeds.
+                                    </p>
+                                    <div class="card-actions">
+                                        <button
+                                            type="button"
+                                            aria-label="Star project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >star</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Watch project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >visibility</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Fork project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >share</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="card">
+                                <div class="card-left-border"></div>
+                                <div class="card-content">
+                                    <h4>Money Maker</h4>
+                                    <p>
+                                        An e-commerce analytics suite that
+                                        identifies high-converting traffic
+                                        sources and automates seasonal discount
+                                        campaigns.
+                                    </p>
+                                    <div class="card-actions">
+                                        <button
+                                            type="button"
+                                            aria-label="Star project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >star</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Watch project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >visibility</span
+                                            >
+                                        </button>
+                                        <button
+                                            type="button"
+                                            aria-label="Fork project"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined"
+                                                aria-hidden="true"
+                                                >share</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <aside class="right-sidebar">
+                        <!-- announcements section -->
+                        <section class="announcements">
+                            <h3>Announcements</h3>
+                            <div class="announcement-card">
+                                <div class="announcement-item">
+                                    <h5>Site Maintenance</h5>
+                                    <p>
+                                        We will be performing a scheduled server
+                                        migration this Sunday at 2:00 AM EST.
+                                    </p>
+                                </div>
+                                <hr class="divider" />
+                                <div class="announcement-item">
+                                    <h5>Community Share Day</h5>
+                                    <p>
+                                        Our next showcase is this Friday! Get
+                                        your projects ready to present.
+                                    </p>
+                                </div>
+                                <hr class="divider" />
+                                <div class="announcement-item">
+                                    <h5>Updated Privacy Policy</h5>
+                                    <p>
+                                        We’ve clarified how we handle
+                                        third-party cookies to comply with GDPR.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- trending section -->
+
+                        <section class="trending">
+                            <h3>Trending</h3>
+                            <div class="trending-card">
+                                <div class="trend-item">
+                                    <img
+                                        src="assets/destiny.svg"
+                                        alt="Destiny"
+                                        class="avatar"
+                                    />
+                                    <div class="trend-info">
+                                        <a href="#" class="username"
+                                            >@destiny</a
+                                        >
+                                        <span class="desc"
+                                            >World peace builder</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="trend-item">
+                                    <img
+                                        src="assets/george.svg"
+                                        alt="george"
+                                        class="avatar"
+                                    />
+                                    <div class="trend-info">
+                                        <a href="#" class="username">@george</a>
+                                        <span class="desc"
+                                            >Super Cool Project</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="trend-item">
+                                    <img
+                                        src="assets/sawyer.svg"
+                                        alt="sawyer"
+                                        class="avatar"
+                                    />
+                                    <div class="trend-info">
+                                        <a href="#" class="username">@sawyer</a>
+                                        <span class="desc"
+                                            >Life Changing App</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="trend-item">
+                                    <img
+                                        src="assets/mason.svg"
+                                        alt="mason"
+                                        class="avatar"
+                                    />
+                                    <div class="trend-info">
+                                        <a href="#" class="username">@mason</a>
+                                        <span class="desc"
+                                            >No traffic maker</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </body>
 </html>
