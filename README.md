@@ -1,11 +1,13 @@
 # Admin Dashboard Project
 
+![screenshot of the project](images/screenshot.png)
+
 ## Made using
 
 -   HTML
 -   CSS
 
-## Credits & Attributions
+### Credits & Attributions
 
 This project uses avatar assets generated via [DiceBear](https://www.dicebear.com/).
 
